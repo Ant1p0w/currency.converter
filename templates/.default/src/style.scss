@@ -1,0 +1,64 @@
+$base-margin: 30px;
+$base-padding: 20px;
+
+@mixin desktop-width {
+  width: 100%;
+  margin-bottom: $base-margin;
+
+  @media (min-width: 768px) {
+    width: 45%;
+  }
+}
+
+.currency-converter {
+  font-family: Arial;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $base-padding;
+  font-size: 18px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__form-container {
+    @include desktop-width;
+
+    .el-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-around;
+
+      .text-center {
+        text-align: center;
+      }
+    }
+
+    .el-form-item {
+      &__label {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__result {
+    @include desktop-width;
+
+    padding: $base-padding;
+    background: #eee;
+
+    &-value {
+      margin: $base-margin 0;
+      font-size: 20px;
+    }
+
+    &-currency {
+      font-size: 12px;
+    }
+  }
+}
