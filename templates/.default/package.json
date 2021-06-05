@@ -11,7 +11,7 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "element-ui": "^2.13.0",
     "lodash": "^4.17.19",
     "url-loader": "^4.1.0",
